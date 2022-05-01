@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "a3c951fe-6b6d-4fa0-b58f-9f4694f9ca9e",
+		"name": "ms-assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "sign up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"yosgi@ssfsssf.com\",\n    \"password\":\"test@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9002/sign-up",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"sign-up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sign in",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"yosgi@ssfsssf.com\",\n    \"password\":\"test@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9002/sign-in",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"sign-in"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "upload file",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNmU4YmZiNzQ4MGMxMTEwZTViYmQ0MyIsImVtYWlsIjoieW9zZ2lAc3Nmc3NzZi5jb20iLCJpYXQiOjE2NTE0MTE5NjQsImV4cCI6MTY1MTU4NDc2NCwiYXVkIjoiYXVkIiwiaXNzIjoiSE9QSU5EIiwic3ViIjoiQXV0aCBTZXJ2aWNlIn0.YDtRWJn7KXWIXsvojB8lJhTbC6rqAy7UIurCD0f_8Cg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/rabson/Downloads/1628707205528___e061b706cf75aad2696f58eca2a1916a_thumb.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:9002/user/upload-file",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"user",
+								"upload-file"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get uploaded file list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNmU4YmZiNzQ4MGMxMTEwZTViYmQ0MyIsImVtYWlsIjoieW9zZ2lAc3Nmc3NzZi5jb20iLCJpYXQiOjE2NTE0MTE5NjQsImV4cCI6MTY1MTU4NDc2NCwiYXVkIjoiYXVkIiwiaXNzIjoiSE9QSU5EIiwic3ViIjoiQXV0aCBTZXJ2aWNlIn0.YDtRWJn7KXWIXsvojB8lJhTbC6rqAy7UIurCD0f_8Cg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/rabson/Downloads/1628707205528___e061b706cf75aad2696f58eca2a1916a_thumb.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:9002/user/files",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"user",
+								"files"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

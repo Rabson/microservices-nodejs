@@ -1,0 +1,25 @@
+{
+  "name": "main-workspace",
+  "version": "1.0.0",
+  "scripts": {
+    "lint": "eslint --fix ./",
+    "file-upload": "nodemon  ./apps/file-upload-service/index.js",
+    "user": "nodemon  ./apps/user-service/index.js"
+  },
+  "workspaces": [
+    "./apps/libs/*"
+  ],
+  "author": "Rabson",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.14.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "husky": "^7.0.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  }
+}

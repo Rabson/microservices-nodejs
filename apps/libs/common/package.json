@@ -1,0 +1,13 @@
+{
+  "name": "@lib/common",
+  "version": "1.0.0",
+  "description": "Common packages for hopind",
+  "main": "",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "jsonwebtoken": "^8.5.1",
+    "winston": "^3.7.2"
+  }
+}
